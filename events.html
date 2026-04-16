@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Events | AI-ML CLUB — GECA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .event-full{display:grid;grid-template-columns:110px 1fr;gap:28px;align-items:start;background:var(--card);padding:28px;border-bottom:1px solid var(--border);transition:background 0.2s;position:relative;overflow:hidden;}
+    .event-full:hover{background:#161616;}
+    .event-full::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green);transform:scaleY(0);transform-origin:bottom;transition:transform 0.35s;}
+    .event-full.upcoming::before{background:var(--amber);}
+    .event-full.past::before{background:var(--muted);}
+    .event-full:hover::before{transform:scaleY(1);}
+    .event-cal{text-align:center;background:var(--surface);border:1px solid var(--border2);padding:14px 10px;}
+    .event-cal-month{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);}
+    .event-cal-day{font-family:var(--font-head);font-size:40px;font-weight:700;line-height:1.1;}
+    .event-cal-year{font-size:9px;color:var(--muted);}
+    .event-content-title{font-family:var(--font-head);font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px;}
+    .event-content-meta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px;}
+    .event-content-desc{font-size:13px;color:var(--dim);line-height:1.7;}
+    .event-time{font-size:11px;color:var(--dim);}
+    .event-time strong{color:var(--bright);}
+    @media(max-width:600px){.event-full{grid-template-columns:80px 1fr;gap:16px;}}
+  </style>
+</head>
+<body>
+  <div class="scanline"></div>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="brand"><img src="assets/logo.png" class="logo" alt="" onerror="this.style.display='none'">&gt; <span>AI-ML CLUB</span>&nbsp;/ GECA</a>
+      <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html" class="active">Events</a></li><li><a href="workshops.html">Workshops</a></li>
+        <li><a href="research.html">Research</a></li><li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li><li><a href="team.html" class="nav-pill">Team</a></li>
+        <li><a href="join.html" class="button" style="font-size:10px;padding:6px 14px;">Join Us</a></li>
+      </ul>
+    </nav>
+
+    <h1 class="page-heading reveal">&gt; EVENTS<span class="accent">_</span></h1>
+    <p class="page-intro reveal">Hackathons, seminars, showcases, and community gatherings. Every event is a chance to build something real.</p>
+
+    <section class="reveal">
+      <div class="section-label">// UPCOMING</div>
+    <!--
+      <div style="border:1px solid var(--border);">
+        <div class="event-full upcoming">
+          <div class="event-cal"><div class="event-cal-month">Apr</div><div class="event-cal-day" style="color:var(--amber)">12</div><div class="event-cal-year">2025</div></div>
+          <div>
+            <div class="event-content-title">AI Hackathon 2025 — Build in 24hrs</div>
+            <div class="event-content-meta"><span class="tag amber">Hackathon</span><span class="tag">Open to All</span><span class="event-time"><strong>9:00 AM</strong> onwards · GECA Campus</span></div>
+            <p class="event-content-desc">Our flagship 24-hour hackathon. Solo or team of up to 3. Build any AI/ML application from scratch. Prizes, certificates, and a guaranteed portfolio piece.</p>
+            <div style="margin-top:14px;"><a href="join.html" class="button amber">Register Now</a></div>
+          </div>
+        </div>
+        <div class="event-full upcoming">
+          <div class="event-cal"><div class="event-cal-month">Apr</div><div class="event-cal-day" style="color:var(--amber)">28</div><div class="event-cal-year">2025</div></div>
+          <div>
+            <div class="event-content-title">Guest Talk: Generative AI in Industry</div>
+            <div class="event-content-meta"><span class="tag cyan">Talk</span><span class="tag">Free</span><span class="event-time"><strong>4:00 PM</strong> · Seminar Hall, GECA</span></div>
+            <p class="event-content-desc">Industry practitioner's perspective on how GenAI is reshaping product development. Open Q&A. Seats limited — confirm with Communication Team.</p>
+          </div>
+        </div>
+        <div class="event-full upcoming">
+          <div class="event-cal"><div class="event-cal-month">May</div><div class="event-cal-day" style="color:var(--amber)">10</div><div class="event-cal-year">2025</div></div>
+          <div>
+            <div class="event-content-title">End-of-Semester Project Showcase</div>
+            <div class="event-content-meta"><span class="tag green">Showcase</span><span class="tag">Public</span><span class="event-time"><strong>11:00 AM</strong> · Main Hall, GECA</span></div>
+            <p class="event-content-desc">Teams present semester projects to faculty, peers, and invited guests. Every team ships something this semester.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  -->
+    <section class="reveal">
+      <div class="section-label">// PAST EVENTS</div>
+
+<p class="page-intro reveal" style="margin-bottom:30px;">
+  It all started with a small idea — <strong>ML ROT Series</strong>. 
+  What began as a basic learning initiative slowly evolved into a culture of building, experimenting, 
+  and pushing boundaries. Every session, event, and interaction shaped what the club is today.
+</p>
+
+<div style="border:1px solid var(--border);">
+
+  <!-- ML ROT Series -->
+  <div class="event-full past">
+    <div class="event-cal">
+      <div class="event-cal-month">SEP</div>
+      <div class="event-cal-day">19</div>
+      <div class="event-cal-year">2025</div>
+    </div>
+    <div>
+      <div class="event-content-title">ML ROT Series — Session 1</div>
+      <div class="event-content-meta">
+        <span class="tag amber">Foundation</span>
+        <span class="tag">Workshop</span>
+      </div>
+      <p class="event-content-desc">
+        The beginning. Introduction to Machine Learning concepts, mindset, and real-world applications.
+      </p>
+    </div>
+  </div>
+
+  <div class="event-full past">
+    <div class="event-cal">
+      <div class="event-cal-month">OCT</div>
+      <div class="event-cal-day">04</div>
+      <div class="event-cal-year">2025</div>
+    </div>
+    <div>
+      <div class="event-content-title">ML ROT Series — Session 2</div>
+      <div class="event-content-meta">
+        <span class="tag">Workshop</span>
+      </div>
+      <p class="event-content-desc">
+        Hands-on exposure with ML workflows, datasets, and basic model building.
+      </p>
+    </div>
+  </div>
+
+  <div class="event-full past">
+    <div class="event-cal">
+      <div class="event-cal-month">OCT</div>
+      <div class="event-cal-day">09</div>
+      <div class="event-cal-year">2025</div>
+    </div>
+    <div>
+      <div class="event-content-title">ML ROT Series — Session 3</div>
+      <div class="event-content-meta">
+        <span class="tag green">Execution</span>
+        <span class="tag">Workshop</span>
+      </div>
+      <p class="event-content-desc">
+        Transition from learning to building. Participants explored real mini-projects and implementation thinking.
+      </p>
+    </div>
+  </div>
+
+  <!-- Hawkins Quiz -->
+  <div class="event-full past">
+    <div class="event-cal">
+      <div class="event-cal-month">JAN</div>
+      <div class="event-cal-day">13</div>
+      <div class="event-cal-year">2026</div>
+    </div>
+    <div>
+      <div class="event-content-title">AI ML Hawkins Quiz</div>
+      <div class="event-content-meta">
+        <span class="tag cyan">Quiz</span>
+        <span class="tag">Engagement</span>
+      </div>
+      <p class="event-content-desc">
+        A fast-paced quiz event testing AI/ML knowledge, concepts, and instincts under pressure.
+      </p>
+    </div>
+  </div>
+
+  <!-- AI Detection Game -->
+  <div class="event-full past">
+    <div class="event-cal">
+      <div class="event-cal-month">JAN</div>
+      <div class="event-cal-day">--</div>
+      <div class="event-cal-year">2026</div>
+    </div>
+    <div>
+      <div class="event-content-title">AI Detection Game</div>
+      <div class="event-content-meta">
+        <span class="tag purple">Backpropagation Team</span>
+        <span class="tag">Interactive</span>
+      </div>
+      <p class="event-content-desc">
+        Participants challenged themselves to distinguish between human and AI-generated content — 
+        a fun yet insightful dive into modern AI capabilities.
+      </p>
+    </div>
+  </div>
+
+  <!-- Let AI Do It -->
+  <div class="event-full past">
+    <div class="event-cal">
+      <div class="event-cal-month">JAN</div>
+      <div class="event-cal-day">28</div>
+      <div class="event-cal-year">2026</div>
+    </div>
+    <div>
+      <div class="event-content-title">Let AI Do It</div>
+      <div class="event-content-meta">
+        <span class="tag amber">Applied AI</span>
+      </div>
+      <p class="event-content-desc">
+        A session focused on leveraging AI tools to automate workflows, enhance productivity, and rethink problem-solving.
+      </p>
+    </div>
+  </div>
+
+  <!-- Dark Model Rises -->
+  <div class="event-full past">
+    <div class="event-cal">
+      <div class="event-cal-month">FEB</div>
+      <div class="event-cal-day">--</div>
+      <div class="event-cal-year">2026</div>
+    </div>
+    <div>
+      <div class="event-content-title">The Dark Model Rises</div>
+      <div class="event-content-meta">
+        <span class="tag purple">Backpropagation Team</span>
+        <span class="tag red">Advanced</span>
+      </div>
+      <p class="event-content-desc">
+        Explored deeper and lesser-known aspects of AI systems — limitations, risks, and powerful capabilities beyond the surface.
+      </p>
+    </div>
+  </div>
+
+  <!-- RAG Workshop -->
+  <div class="event-full past">
+    <div class="event-cal">
+      <div class="event-cal-month">FEB</div>
+      <div class="event-cal-day">--</div>
+      <div class="event-cal-year">2026</div>
+    </div>
+    <div>
+      <div class="event-content-title">RAG Workshop</div>
+      <div class="event-content-meta">
+        <span class="tag amber">Workshop</span>
+        <span class="tag">LLM Systems</span>
+      </div>
+      <p class="event-content-desc">
+        Hands-on workshop on Retrieval-Augmented Generation (RAG), focusing on building intelligent systems with real-world data integration.
+      </p>
+    </div>
+  </div>
+
+</div>
+    </section>
+
+    <div style="padding:20px 0 60px;"><a href="index.html" class="button ghost">← Back to Home</a></div>
+    <footer>
+      <div class="footer-brand"><span>AI-ML CLUB</span> — GECA, Ajmer | Session 2025–26</div>
+      <div class="footer-links"><a href="projects.html">Projects</a><a href="events.html">Events</a><a href="join.html">Join Us</a><a href="contact.html">Contact</a><a href="team.html">Team</a></div>
+      <div class="footer-copy">&copy; 2025 AI-ML Club, GECA. All rights reserved.</div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | AI-ML CLUB — GECA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-card{background:var(--card);padding:32px 28px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+    .project-card:last-child{border-bottom:none;}
+    .project-card:hover{background:#161616;}
+    .project-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px;flex-wrap:wrap;}
+    .project-title{font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--white);}
+    .project-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+    .project-desc{font-size:13px;color:var(--dim);line-height:1.7;}
+    .project-num{position:absolute;right:24px;bottom:16px;font-family:var(--font-head);font-size:52px;font-weight:700;color:var(--border);line-height:1;pointer-events:none;user-select:none;}
+  </style>
+</head>
+<body>
+  <div class="scanline"></div>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" class="logo" alt="" onerror="this.style.display='none'">
+        &gt; <span>AI-ML CLUB</span>&nbsp;/ GECA
+      </a>
+      <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="team.html" class="nav-pill">Team</a></li>
+        <li><a href="join.html" class="button" style="font-size:10px;padding:6px 14px;">Join Us</a></li>
+      </ul>
+    </nav>
+
+    <h1 class="page-heading reveal">&gt; PROJECTS<span class="accent">_</span></h1>
+    <p class="page-intro reveal">Applied ML systems built by our members. Real problems. Real code. Portfolio-grade work.</p>
+
+    <section class="reveal">
+      <!--
+      <div class="section-label">// ACTIVE BUILDS</div>
+      <div style="background:var(--card);border:1px solid var(--border);">
+        <div class="project-card">
+          <div class="project-num">01</div>
+          <div class="project-header"><div class="project-title">Campus Support Chatbot</div><span class="tag green">Active</span></div>
+          <div class="project-tags"><span class="tag cyan">NLP</span><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">RAG</span></div>
+          <p class="project-desc">An intelligent chatbot for campus support — timetables, exam schedules, faculty contacts. Built on RAG architecture with a curated GECA knowledge base.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-num">02</div>
+          <div class="project-header"><div class="project-title">Lab Automation Vision System</div><span class="tag amber">In Progress</span></div>
+          <div class="project-tags"><span class="tag cyan">Computer Vision</span><span class="tag">OpenCV</span><span class="tag">YOLOv8</span></div>
+          <p class="project-desc">Real-time object detection for electronics lab equipment. Identifies components and checks lab safety compliance using a custom-trained YOLOv8 model.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-num">03</div>
+          <div class="project-header"><div class="project-title">Attendance Prediction System</div><span class="tag green">Active</span></div>
+          <div class="project-tags"><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">Flask</span><span class="tag cyan">Predictive ML</span></div>
+          <p class="project-desc">Forecasts student attendance patterns and flags at-risk students for early intervention. Trained on anonymized attendance records.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-num">04</div>
+          <div class="project-header"><div class="project-title">Handwritten Devnagari OCR</div><span class="tag amber">In Progress</span></div>
+          <div class="project-tags"><span class="tag cyan">Deep Learning</span><span class="tag">TensorFlow</span><span class="tag">CNN</span><span class="tag">OCR</span></div>
+          <p class="project-desc">OCR system for handwritten Devnagari script. CNN-based architecture trained on DHDD dataset — digitizing handwritten Hindi notes.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-num">05</div>
+          <div class="project-header"><div class="project-title">Sentiment Analysis — College Reviews</div><span class="tag green">Shipped</span></div>
+          <div class="project-tags"><span class="tag cyan">NLP</span><span class="tag">BERT</span><span class="tag">HuggingFace</span><span class="tag">Streamlit</span></div>
+          <p class="project-desc">Fine-tuned BERT for sentiment classification on college review datasets. Our first fully-shipped public demo — deployed as an interactive Streamlit app.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-num">06</div>
+          <div class="project-header"><div class="project-title">AI-ML Club Website</div><span class="tag green">Shipped</span></div>
+          <div class="project-tags"><span class="tag">HTML/CSS/JS</span><span class="tag cyan">Web Dev</span></div>
+          <p class="project-desc">This very site — designed and built by the Core Team. Zero frameworks. Premium retro-terminal aesthetic, fully responsive.</p>
+        </div>
+      </div>
+    </section>
+  -->
+<section class="reveal">
+  <div class="section-label">// EXPLORE MORE</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);">
+
+    <!-- GitHub -->
+    <div class="card">
+      <div class="card-tag">// open-source</div>
+      <h3>Club GitHub</h3>
+      <p>
+        All active and completed projects are maintained on our GitHub. 
+        Explore code, contribute, or fork ideas and build your own.
+      </p>
+      <div style="margin-top:18px;">
+        <a href="https://github.com/CLUB-AI-ML" target="_blank" class="button">
+          View GitHub →
+        </a>
+      </div>
+    </div>
+
+    <!-- WhatsApp -->
+    <div class="card">
+      <div class="card-tag">// community</div>
+      <h3>Projects Discussion</h3>
+      <p>
+        Real discussions, updates, and project ideas happen inside our WhatsApp community. 
+        Join to stay in the loop and collaborate with other members.
+      </p>
+      <div style="margin-top:18px;">
+        <a href="#" class="button ghost">
+          Join WhatsApp Community →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <section class="reveal">
+      <div class="section-label">// PROPOSE A PROJECT</div>
+      <div class="terminal"><br>
+        <div class="line"><span class="cmd">$ cat contribute.md</span></div>
+        <div class="line">&nbsp;&nbsp;<span class="str">## Want to build something?</span></div>
+        <div class="line">&nbsp;&nbsp;<span class="val">1.</span> Talk to the Tech Lead or Project Lead</div>
+        <div class="line">&nbsp;&nbsp;<span class="val">2.</span> Submit a problem statement + tech approach</div>
+        <div class="line">&nbsp;&nbsp;<span class="val">3.</span> Get matched with a team or start your own</div>
+        <div class="line">&nbsp;&nbsp;<span class="val">4.</span> Ship. Document. Present.</div>
+        <div class="line">&nbsp;&nbsp;<span class="comment"># No idea is too small. Start with what you know.</span></div>
+        <div class="line"><span class="cmd">$ _<span class="cursor"></span></span></div>
+      </div>
+    </section>
+
+    <div style="padding:20px 0 60px;"><a href="index.html" class="button ghost">← Back to Home</a></div>
+    <footer>
+      <div class="footer-brand"><span>AI-ML CLUB</span> — GECA, Ajmer | Session 2025–26</div>
+      <div class="footer-links"><a href="projects.html">Projects</a><a href="events.html">Events</a><a href="join.html">Join Us</a><a href="contact.html">Contact</a><a href="team.html">Team</a></div>
+      <div class="footer-copy">&copy; 2025 AI-ML Club, GECA. All rights reserved.</div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

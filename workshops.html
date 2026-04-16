@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Workshops | AI-ML CLUB — GECA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .wtrack{background:var(--card);padding:32px 28px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+    .wtrack:last-child{border-bottom:none;}
+    .wtrack::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+    .wtrack.t1::before{background:linear-gradient(90deg,var(--green),transparent);}
+    .wtrack.t2::before{background:linear-gradient(90deg,var(--amber),transparent);}
+    .wtrack.t3::before{background:linear-gradient(90deg,var(--cyan),transparent);}
+    .wtrack.t4::before{background:linear-gradient(90deg,var(--purple),transparent);}
+    .wtrack-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
+    .wtrack-title{font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--white);}
+    .wtrack-meta{font-size:11px;color:var(--dim);margin-top:3px;}
+    .modules{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1px;background:var(--border);margin-top:18px;}
+    .mod{background:var(--surface);padding:12px 14px;}
+    .mod-n{font-size:9px;color:var(--muted);letter-spacing:0.12em;margin-bottom:3px;}
+    .mod-t{font-size:12px;color:var(--bright);}
+    .prog-bar{height:3px;background:var(--border);margin-top:14px;border-radius:2px;overflow:hidden;}
+    .prog-fill{height:100%;border-radius:2px;}
+  </style>
+</head>
+<body>
+  <div class="scanline"></div>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="brand"><img src="assets/logo.png" class="logo" alt="" onerror="this.style.display='none'">&gt; <span>AI-ML CLUB</span>&nbsp;/ GECA</a>
+      <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li><li><a href="workshops.html" class="active">Workshops</a></li>
+        <li><a href="research.html">Research</a></li><li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li><li><a href="team.html" class="nav-pill">Team</a></li>
+        <li><a href="join.html" class="button" style="font-size:10px;padding:6px 14px;">Join Us</a></li>
+      </ul>
+    </nav>
+
+    <h1 class="page-heading reveal">&gt; WORKSHOPS<span class="accent">_</span></h1>
+    <p class="page-intro reveal">Structured learning programs run by the club. From zero to production — every track builds real, usable skills.</p>
+
+    <section class="reveal">
+      <div class="wtrack t1">
+  <div class="wtrack-title">ML ROT Series</div>
+  <div class="wtrack-meta">3 Sessions · Sept–Oct 2025 · Completed</div>
+</div>
+
+<div class="wtrack t2">
+  <div class="wtrack-title">RAG Workshop</div>
+  <div class="wtrack-meta">Feb 2026 · Completed</div>
+</div>
+
+<div class="wtrack t3">
+  <div class="wtrack-title">Let AI Do It</div>
+  <div class="wtrack-meta">Jan 2026 · Applied AI Session</div>
+</div>
+    </section>
+
+    <div style="padding:20px 0 60px;"><a href="index.html" class="button ghost">← Back to Home</a></div>
+    <footer>
+      <div class="footer-brand"><span>AI-ML CLUB</span> — GECA, Ajmer | Session 2025–26</div>
+      <div class="footer-links"><a href="projects.html">Projects</a><a href="events.html">Events</a><a href="join.html">Join Us</a><a href="contact.html">Contact</a><a href="team.html">Team</a></div>
+      <div class="footer-copy">&copy; 2025 AI-ML Club, GECA. All rights reserved.</div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

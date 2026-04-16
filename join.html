@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join Us | AI-ML CLUB — GECA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-shell {
+      border: 1px solid var(--border2);
+      background: var(--deep);
+      position: relative;
+      overflow: hidden;
+    }
+    .form-shell-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border2);
+    }
+    .form-shell-dots { display: flex; gap: 6px; }
+    .form-shell-dots span {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--border2);
+    }
+    .form-shell-dots span:nth-child(1) { background: #ff5f57; }
+    .form-shell-dots span:nth-child(2) { background: #febc2e; }
+    .form-shell-dots span:nth-child(3) { background: #28c840; }
+    .form-shell-title {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dim);
+      flex: 1;
+      text-align: center;
+    }
+    .form-shell iframe {
+      width: 100%;
+      border: none;
+      display: block;
+      min-height: 900px;
+      background: transparent;
+      /* invert Google Form colors to match dark theme */
+      filter: invert(1) hue-rotate(180deg);
+    }
+    .form-placeholder {
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .form-placeholder h3 {
+      font-family: var(--font-head);
+      font-size: 18px;
+      color: var(--bright);
+      margin-bottom: 12px;
+    }
+    .form-placeholder p {
+      font-size: 13px;
+      color: var(--dim);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .form-placeholder code {
+      display: block;
+      margin: 12px auto;
+      font-size: 11px;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      padding: 10px 16px;
+      color: var(--green);
+      max-width: 520px;
+      text-align: left;
+      word-break: break-all;
+    }
+    .perks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .perk {
+      background: var(--card);
+      padding: 24px 22px;
+    }
+    .perk-icon { font-size: 22px; margin-bottom: 10px; }
+    .perk-title { font-family: var(--font-head); font-size: 13px; color: var(--bright); margin-bottom: 6px; }
+    .perk-desc { font-size: 12px; color: var(--dim); line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="scanline"></div>
+  <div class="container">
+
+    <nav>
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" class="logo" alt="" onerror="this.style.display='none'">
+        &gt; <span>AI-ML CLUB</span>&nbsp;/ GECA
+      </a>
+      <button class="hamburger" id="ham" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="team.html" class="nav-pill">Team</a></li>
+      </ul>
+    </nav>
+
+    <h1 class="page-heading reveal">&gt; JOIN<span class="accent">_</span>US</h1>
+    <p class="page-intro reveal">
+      We recruit once a semester. If you're curious about AI, ML, or just want to build things that matter — this is your place.
+      No prior experience required. Just bring the drive.
+    </p>
+
+    <!-- Perks -->
+    <section class="reveal">
+      <div class="section-label">// WHY JOIN</div>
+      <div class="perks-grid">
+        <div class="perk">
+          <div class="perk-icon">🧠</div>
+          <div class="perk-title">Learn by Building</div>
+          <div class="perk-desc">Work on real projects, not toy exercises. Ship something you can put on your resume.</div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">🏆</div>
+          <div class="perk-title">Hackathons & Competitions</div>
+          <div class="perk-desc">Compete at inter-college and national level hackathons with club support and prep.</div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">📚</div>
+          <div class="perk-title">Structured Workshops</div>
+          <div class="perk-desc">Free access to all club workshops — from Python basics to deep learning labs.</div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">🤝</div>
+          <div class="perk-title">Industry Network</div>
+          <div class="perk-desc">Guest talks, mentorship from seniors, and exposure to how AI is used in industry.</div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">📄</div>
+          <div class="perk-title">Research Exposure</div>
+          <div class="perk-desc">Work alongside faculty-guided research, read papers, and contribute to real findings.</div>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">⚡</div>
+          <div class="perk-title">Your Certificate</div>
+          <div class="perk-desc">Official membership certificate, event participation certs, and project credits.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section class="reveal">
+      <div class="section-label">// APPLICATION FORM</div>
+
+      <div class="form-shell">
+        <div class="form-shell-bar">
+          <div class="form-shell-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="form-shell-title">aiml-club — join-application.form</div>
+        </div>
+
+        <!-- ============================================================
+             REPLACE THE src BELOW WITH YOUR GOOGLE FORM EMBED LINK
+             Go to your Google Form → Send → Embed → copy the src URL
+             It looks like: https://docs.google.com/forms/d/e/XXXXXX/viewform?embedded=true
+             ============================================================ -->
+       <iframe
+  src="https://forms.gle/6xvr16WSWnZBbCm2A"
+  frameborder="0"
+  marginheight="0"
+  marginwidth="0"
+  title="AI-ML Club Join Application">
+  Loading…
+</iframe>
+
+        <!-- UNCOMMENT AND REPLACE src when you have your form URL:
+        <iframe
+          src="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform?embedded=true"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="AI-ML Club Join Application">
+          Loading…
+        </iframe>
+        -->
+      </div>
+    </section>
+
+    <!-- What happens next -->
+    <section class="reveal">
+      <div class="section-label">// WHAT HAPPENS AFTER YOU APPLY</div>
+      <div style="background:var(--card); border:1px solid var(--border);">
+        <div style="display:grid; grid-template-columns: 48px 1fr; gap:0;">
+
+          <div style="display:contents;">
+            <div style="padding:24px 20px; border-bottom:1px solid var(--border); border-right:1px solid var(--border); font-family:var(--font-head); font-size:18px; font-weight:700; color:var(--green); display:flex; align-items:center; justify-content:center;">01</div>
+            <div style="padding:20px 24px; border-bottom:1px solid var(--border);">
+              <div style="font-family:var(--font-head); font-size:13px; color:var(--bright); margin-bottom:4px;">Application Received</div>
+              <div style="font-size:12px; color:var(--dim);">Your response lands in our Google Sheet. We review all applications after the deadline.</div>
+            </div>
+          </div>
+
+          <div style="display:contents;">
+            <div style="padding:24px 20px; border-bottom:1px solid var(--border); border-right:1px solid var(--border); font-family:var(--font-head); font-size:18px; font-weight:700; color:var(--amber); display:flex; align-items:center; justify-content:center;">02</div>
+            <div style="padding:20px 24px; border-bottom:1px solid var(--border);">
+              <div style="font-family:var(--font-head); font-size:13px; color:var(--bright); margin-bottom:4px;">Shortlist & Invite</div>
+              <div style="font-size:12px; color:var(--dim);">Shortlisted applicants get a WhatsApp/email invite for a quick informal chat with the Core Team.</div>
+            </div>
+          </div>
+
+          <div style="display:contents;">
+            <div style="padding:24px 20px; border-right:1px solid var(--border); font-family:var(--font-head); font-size:18px; font-weight:700; color:var(--cyan); display:flex; align-items:center; justify-content:center;">03</div>
+            <div style="padding:20px 24px;">
+              <div style="font-family:var(--font-head); font-size:13px; color:var(--bright); margin-bottom:4px;">Welcome to the Club</div>
+              <div style="font-size:12px; color:var(--dim);">You're in. Orientation, team assignment, and access to ongoing projects — let's build.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div style="padding: 20px 0 60px; display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="contact.html" class="button cyan">Have a Question? Contact Us</a>
+      <a href="index.html" class="button ghost">← Back to Home</a>
+    </div>
+
+    <footer>
+      <div class="footer-brand"><span>AI-ML CLUB</span> — GECA, Ajmer &nbsp;|&nbsp; Academic Session 2025–26</div>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a>
+        <a href="events.html">Events</a>
+        <a href="join.html">Join Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="team.html">Team</a>
+      </div>
+      <div class="footer-copy">&copy; 2025 AI-ML Club, GECA. All rights reserved.</div>
+    </footer>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

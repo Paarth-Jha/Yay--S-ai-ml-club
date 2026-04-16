@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI-ML CLUB | GECA — Government Engineering College Ajmer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI-ML Club at Government Engineering College Ajmer — Building intelligent systems, applied ML, and research-led learning.">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero */
+    .hero-grid{display:grid;grid-template-columns:1fr 320px;gap:0;align-items:stretch;}
+    .hero-left{padding:80px 56px 80px 0;border-right:1px solid var(--border);}
+    .hero-right{padding:40px 0 40px 44px;display:flex;flex-direction:column;justify-content:center;}
+    .hero-h1{font-family:var(--font-head);font-size:clamp(68px,11vw,130px);font-weight:700;line-height:0.88;letter-spacing:-0.03em;margin:16px 0 26px;}
+    .hero-h1 .accent{color:var(--green);text-shadow:var(--glow-g);}
+    .side-stat{padding:20px 0;border-bottom:1px solid var(--border);}
+    .side-stat:last-child{border-bottom:none;}
+    .side-stat-n{font-family:var(--font-head);font-size:38px;font-weight:700;color:var(--white);line-height:1;}
+    .side-stat-n .unit{font-size:18px;color:var(--green);}
+    .side-stat-l{font-size:10px;color:var(--dim);letter-spacing:0.15em;text-transform:uppercase;margin-top:4px;}
+    /* Marquee */
+    .marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:11px 0;margin:40px 0;}
+    .marquee-inner{display:flex;gap:44px;white-space:nowrap;animation:marquee 28s linear infinite;width:max-content;}
+    .marquee-inner span{font-size:10px;letter-spacing:0.2em;color:var(--border2);text-transform:uppercase;}
+    .marquee-inner span.hl{color:var(--green);}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    /* Streams */
+    .streams-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+    /* Join CTA */
+    .join-cta-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--black);background:var(--green);border:none;padding:13px 30px;border-radius:var(--radius);cursor:pointer;box-shadow:var(--glow-g);transition:all 0.2s;}
+    .join-cta-btn:hover{background:var(--green2);transform:translateY(-2px);}
+
+    /* Modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.9);backdrop-filter:blur(10px);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+    .modal-backdrop.open{opacity:1;pointer-events:all;}
+    .modal{background:var(--deep);border:1px solid var(--border2);max-width:660px;width:100%;max-height:90vh;overflow-y:auto;position:relative;transform:translateY(28px) scale(0.97);transition:transform 0.35s cubic-bezier(0.16,1,0.3,1);}
+    .modal-backdrop.open .modal{transform:translateY(0) scale(1);}
+    .modal-header{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1px solid var(--border2);background:var(--surface);position:sticky;top:0;z-index:1;}
+    .modal-title{font-family:var(--font-head);font-size:12px;font-weight:700;color:var(--bright);letter-spacing:0.08em;}
+    .modal-title span{color:var(--green);}
+    .modal-close{background:none;border:1px solid var(--border2);color:var(--dim);font-size:14px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;border-radius:2px;font-family:var(--font-mono);}
+    .modal-close:hover{border-color:var(--red);color:var(--red);}
+    .modal-body{padding:28px 24px;}
+    .modal-perks{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:24px;}
+    .modal-perk{background:var(--card);padding:12px 14px;font-size:12px;color:var(--dim);display:flex;gap:10px;}
+    .modal-perk span:first-child{color:var(--green);flex-shrink:0;}
+    .modal-form-area{background:var(--surface);border:1px solid var(--border2);}
+    .modal-form-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border2);background:var(--card);}
+    .modal-form-dots{display:flex;gap:5px;}
+    .modal-form-dots span{width:8px;height:8px;border-radius:50%;}
+    .modal-form-dots span:nth-child(1){background:#ff5f57;}
+    .modal-form-dots span:nth-child(2){background:#febc2e;}
+    .modal-form-dots span:nth-child(3){background:#28c840;}
+    .modal-form-label{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim);}
+    .modal-form-area iframe{width:100%;border:none;display:block;min-height:540px;filter:invert(1) hue-rotate(180deg);}
+    .modal-placeholder{padding:40px 24px;text-align:center;}
+    .modal-placeholder h4{font-family:var(--font-head);font-size:14px;color:var(--bright);margin-bottom:10px;}
+    .modal-placeholder p{font-size:12px;color:var(--dim);line-height:1.8;margin-bottom:16px;}
+    .modal-placeholder code{display:block;font-size:10px;background:var(--deep);border:1px solid var(--border2);padding:8px 14px;color:var(--green);margin:8px 0 18px;text-align:left;word-break:break-all;}
+    .modal-footer{padding:14px 22px;border-top:1px solid var(--border2);display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+    .modal-footer p{font-size:11px;color:var(--dim);}
+    .modal-footer a{color:var(--green);}
+
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr;}
+      .hero-left{padding:56px 0;border-right:none;border-bottom:1px solid var(--border);}
+      .hero-right{padding:28px 0;flex-direction:row;flex-wrap:wrap;gap:20px;}
+      .side-stat{border-bottom:none;padding:0;}
+      .streams-grid{grid-template-columns:1fr;}
+      .modal-perks{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+  <div class="scanline"></div>
+
+  <!-- ══ JOIN US MODAL ══ -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <div class="modal-title">&gt; JOIN <span>AI-ML CLUB</span> — GECA</div>
+        <button class="modal-close" id="close-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:13px;color:var(--dim);line-height:1.7;margin-bottom:20px;">No prior AI experience needed — just curiosity and the drive to build. Fill in the form and we'll reach out.</p>
+        <div class="modal-perks">
+          <div class="modal-perk"><span>◆</span><span>Real projects — not toy demos</span></div>
+          <div class="modal-perk"><span>◆</span><span>Free workshops every semester</span></div>
+          <div class="modal-perk"><span>◆</span><span>Hackathon team & support</span></div>
+          <div class="modal-perk"><span>◆</span><span>Industry talks & networking</span></div>
+          <div class="modal-perk"><span>◆</span><span>Official membership certificate</span></div>
+          <div class="modal-perk"><span>◆</span><span>Research with faculty guidance</span></div>
+        </div>
+        <div class="modal-form-area">
+          <div class="modal-form-bar">
+            <div class="modal-form-dots"><span></span><span></span><span></span></div>
+            <div class="modal-form-label">aiml-join-application.form</div>
+          </div>
+          <!-- ══════════════════════════════════════════════════════
+               HOW TO ADD YOUR GOOGLE FORM:
+               1. Go to forms.google.com → create a Join form
+               2. Click Send → Embed ( <> ) tab → copy the src URL
+               3. Delete the .modal-placeholder div below
+               4. Uncomment the <iframe> and paste your URL in src=""
+               ══════════════════════════════════════════════════════ -->
+          <iframe
+  src="https://forms.gle/6xvr16WSWnZBbCm2A"
+  frameborder="0"
+  marginheight="0"
+  marginwidth="0"
+  title="AI-ML Club Join Application">
+  Loading…
+</iframe>
+          <!--
+          <iframe src="https://docs.google.com/forms/d/e/YOUR_JOIN_FORM_ID/viewform?embedded=true"
+            frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Already a member? <a href="team.html">See the team →</a></p>
+        <a href="join.html" class="button ghost">Full Join Page</a>
+      </div>
+    </div>
+  </div>
+  <!-- ══ END MODAL ══ -->
+
+  <div class="container">
+    <nav>
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" class="logo" alt="" onerror="this.style.display='none'">
+        &gt; <span>AI-ML CLUB</span>&nbsp;/ GECA
+      </a>
+      <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul id="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="team.html" class="nav-pill">Team</a></li>
+        <li><button class="button" id="open-modal" style="font-size:10px;padding:6px 16px;cursor:pointer;background:rgba(57,255,138,0.07);">Join Us ↗</button></li>
+      </ul>
+    </nav>
+
+    <div class="status-bar">
+      <span class="status-dot"></span>
+      <span>SYSTEM ONLINE</span>
+      <span>//</span>
+      <span>ACADEMIC SESSION 2025–26</span>
+      <span>//</span>
+      <span>GECA, AJMER, RAJASTHAN</span>
+    </div>
+
+    <div class="hero-grid reveal">
+      <div class="hero-left">
+        <div class="hero-eyebrow">Government Engineering College Ajmer</div>
+        <h1 class="hero-h1">
+          <span style="color:var(--white)">AI</span><span class="accent">—</span><br>
+          <span style="color:var(--white)">ML</span><br>
+          <span style="color:var(--white)">CLUB</span><span class="cursor"></span>
+        </h1>
+        <p class="hero-sub">A student-driven technical body at GECA focused on intelligent systems, applied ML engineering, and research-led learning. We build, break, and ship.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+          <button class="join-cta-btn" id="open-modal-hero">Join the Club ↗</button>
+          <a href="projects.html" class="button amber">View Projects</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="side-stat"><div class="side-stat-n">20<span class="unit">+</span></div><div class="side-stat-l">Active Members</div></div>
+        <div class="side-stat"><div class="side-stat-n">06<span class="unit">+</span></div><div class="side-stat-l">Live Projects</div></div>
+        <div class="side-stat"><div class="side-stat-n">10<span class="unit">+</span></div><div class="side-stat-l">Workshops Conducted</div></div>
+        <div class="side-stat"><div class="side-stat-n">2<span class="unit">nd</span></div><div class="side-stat-l">Year Active</div></div>
+      </div>
+    </div>
+
+    <div class="marquee-wrap">
+      <div class="marquee-inner">
+        <span class="hl">// DEEP LEARNING</span><span>COMPUTER VISION</span>
+        <span class="hl">// NATURAL LANGUAGE PROCESSING</span><span>REINFORCEMENT LEARNING</span>
+        <span class="hl">// MACHINE LEARNING</span><span>DATA SCIENCE</span>
+        <span class="hl">// NEURAL NETWORKS</span><span>LARGE LANGUAGE MODELS</span>
+        <span class="hl">// DEEP LEARNING</span><span>COMPUTER VISION</span>
+        <span class="hl">// NATURAL LANGUAGE PROCESSING</span><span>REINFORCEMENT LEARNING</span>
+        <span class="hl">// MACHINE LEARNING</span><span>DATA SCIENCE</span>
+        <span class="hl">// NEURAL NETWORKS</span><span>LARGE LANGUAGE MODELS</span>
+      </div>
+    </div>
+
+    <section class="reveal">
+      <div class="section-label">01 // WORK STREAMS</div>
+      <div class="streams-grid">
+        <div class="card"><div class="card-num">01</div><div class="card-tag">// applied engineering</div><h3>Projects</h3><p>Production-grade ML systems, tools, and portfolio-ready builds that solve real problems.</p><a href="projects.html" class="button">Explore</a></div>
+        <div class="card"><div class="card-num">02</div><div class="card-tag">// structured learning</div><h3>Workshops</h3><p>Intensive bootcamps, hands-on labs, and semester-long cohorts for every skill level.</p><a href="workshops.html" class="button">Explore</a></div>
+        <div class="card"><div class="card-num">03</div><div class="card-tag">// academic depth</div><h3>Research</h3><p>Deep learning, computer vision, and emerging AI with faculty-guided rigor.</p><a href="research.html" class="button">Explore</a></div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="section-label">02 // LEADERSHIP</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);">
+        <div class="member-card vip">
+          <img class="member-photo" src="assets/team/priyanshu.jpg" alt="Priyanshu Singh Chauhan" loading="lazy" data-initials="PC">
+          <div class="member-name">Priyanshu Singh Chauhan</div>
+          <div class="member-role" style="color:var(--amber)">President</div>
+          <div class="member-sub">AI-ML Club, GECA</div>
+        </div>
+        <div class="member-card vip">
+          <img class="member-photo" src="assets/team/navindra.jpg" alt="Navindra Singh Deval" loading="lazy" data-initials="ND">
+          <div class="member-name">Navindra Singh Deval</div>
+          <div class="member-role" style="color:var(--cyan)">Vice President</div>
+          <div class="member-sub">AI-ML Club, GECA</div>
+        </div>
+        <div class="member-card vip">
+          <img class="member-photo" src="assets/team/aditya-sharma.jpg" alt="Aditya Sharma" loading="lazy" data-initials="AS">
+          <div class="member-name">Aditya Sharma</div>
+          <div class="member-role" style="color:var(--purple)">Secretary</div>
+          <div class="member-sub">3rd Year</div>
+        </div>
+      </div>
+      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="team.html" class="button ghost">Full Team Directory</a>
+        <a href="contact.html" class="button ghost">Contact Us</a>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="section-label">03 // UPCOMING EVENTS</div>
+      <div id="events-container"></div>
+      <div style="margin-top:18px;"><a href="events.html" class="button cyan">All Events</a></div>
+    </section>
+
+    <section class="reveal">
+      <div class="section-label">04 // SYSTEM STATUS</div>
+      <div class="terminal"><br>
+        <div class="line"><span class="cmd">$ whoami</span></div>
+        <div class="line">&nbsp;&nbsp;<span class="val">AI-ML Club</span> — Government Engineering College Ajmer</div>
+        <div class="line"><span class="cmd">$ cat mission.txt</span></div>
+        <div class="line">&nbsp;&nbsp;<span class="str">"Build intelligent systems. Grow together. Ship real work."</span></div>
+        <div class="line"><span class="cmd">$ ls ./teams/</span></div>
+        <div class="line">&nbsp;&nbsp;<span class="val">guidance/</span>&nbsp;&nbsp;<span class="val">core/</span>&nbsp;&nbsp;<span class="val">content/</span>&nbsp;&nbsp;<span class="val">communication/</span>&nbsp;&nbsp;<span class="val">gradients/</span></div>
+        <div class="line"><span class="cmd">$ git log --oneline -3</span></div>
+        <div class="line">&nbsp;&nbsp;<span class="comment">a3f9b12&nbsp;&nbsp;chore: kick off session 2025-26</span></div>
+        <div class="line">&nbsp;&nbsp;<span class="comment">f81c034&nbsp;&nbsp;feat: onboard new gradients batch</span></div>
+        <div class="line">&nbsp;&nbsp;<span class="comment">20de991&nbsp;&nbsp;init: AI-ML Club, GECA</span></div>
+        <div class="line"><span class="cmd">$ _<span class="cursor"></span></span></div>
+      </div>
+    </section>
+
+    <section class="reveal" style="border:none;padding:0 0 60px;">
+      <div style="background:var(--card);border:1px solid var(--border);padding:44px 36px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:10px;letter-spacing:0.2em;color:var(--green);text-transform:uppercase;margin-bottom:10px;">// Open Recruitment</div>
+          <div style="font-family:var(--font-head);font-size:22px;font-weight:700;color:var(--white);margin-bottom:8px;">Want to build with us?</div>
+          <p style="font-size:13px;color:var(--dim);max-width:440px;line-height:1.7;">No experience required. Just bring curiosity. We'll teach the rest.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button class="join-cta-btn" id="open-modal-cta">Apply Now ↗</button>
+          <a href="contact.html" class="button cyan">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-brand"><span>AI-ML CLUB</span> — Government Engineering College Ajmer<br>Badliya Road, Ajmer, Rajasthan 305025<br></div>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a><a href="events.html">Events</a>
+        <a href="workshops.html">Workshops</a><a href="research.html">Research</a>
+        <a href="gallery.html">Gallery</a><a href="join.html">Join Us</a>
+        <a href="contact.html">Contact</a><a href="team.html">Team</a>
+      </div>
+      <div class="footer-copy">&copy; 2025 AI-ML Club, GECA. All rights reserved. &nbsp;//&nbsp; Built with ♥ by the Core Team</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    var backdrop = document.getElementById('modal-backdrop');
+    function openModal(){backdrop.classList.add('open');document.body.style.overflow='hidden';}
+    function closeModal(){backdrop.classList.remove('open');document.body.style.overflow='';}
+    ['open-modal','open-modal-hero','open-modal-cta'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el) el.addEventListener('click',openModal);
+    });
+    document.getElementById('close-modal').addEventListener('click',closeModal);
+    backdrop.addEventListener('click',function(e){if(e.target===backdrop)closeModal();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Research | AI-ML CLUB — GECA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanline"></div>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="brand"><img src="assets/logo.png" class="logo" alt="" onerror="this.style.display='none'">&gt; <span>AI-ML CLUB</span>&nbsp;/ GECA</a>
+      <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li><li><a href="workshops.html">Workshops</a></li>
+        <li><a href="research.html" class="active">Research</a></li><li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li><li><a href="team.html" class="nav-pill">Team</a></li>
+        <li><a href="join.html" class="button" style="font-size:10px;padding:6px 14px;">Join Us</a></li>
+      </ul>
+    </nav>
+
+    <h1 class="page-heading reveal">&gt; RESEARCH<span class="accent">_</span></h1>
+    <p class="page-intro reveal">
+Research vertical is currently under development. 
+Structured research initiatives and paper collaborations will begin soon.
+</p>
+<!--
+    <section class="reveal">
+      <div class="section-label">// FOCUS AREAS</div>
+      <div class="grid grid-3">
+        <div class="card"><div class="card-num">R1</div><div class="card-tag">// vision</div><h3>Computer Vision</h3><p>Object detection, segmentation, OCR, and scene understanding using CNNs, ViTs, and diffusion models.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;"><span class="tag cyan">CNN</span><span class="tag">ViT</span><span class="tag">YOLO</span><span class="tag">OpenCV</span></div></div>
+        <div class="card"><div class="card-num">R2</div><div class="card-tag">// language</div><h3>NLP & LLMs</h3><p>Transformers, fine-tuning large language models, and retrieval-augmented generation for domain-specific tasks.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;"><span class="tag green">BERT</span><span class="tag">GPT</span><span class="tag">RAG</span><span class="tag">HuggingFace</span></div></div>
+        <div class="card"><div class="card-num">R3</div><div class="card-tag">// decision</div><h3>Reinforcement Learning</h3><p>Sequential decision-making, policy optimization, multi-armed bandits, and game-playing agents.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;"><span class="tag amber">Q-Learning</span><span class="tag">PPO</span><span class="tag">Gym</span></div></div>
+        <div class="card"><div class="card-num">R4</div><div class="card-tag">// sequence</div><h3>Deep Learning for Sequences</h3><p>RNNs, LSTMs, and transformer-based models for time-series forecasting and signal processing.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;"><span class="tag">LSTM</span><span class="tag cyan">Transformer</span><span class="tag">Time-Series</span></div></div>
+        <div class="card"><div class="card-num">R5</div><div class="card-tag">// generation</div><h3>Generative AI</h3><p>Diffusion models, GANs, VAEs for image generation, data augmentation, and creative tooling.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;"><span class="tag green">Diffusion</span><span class="tag">GAN</span><span class="tag">VAE</span></div></div>
+        <div class="card"><div class="card-num">R6</div><div class="card-tag">// ethics</div><h3>Responsible AI</h3><p>Fairness, explainability, bias detection, and safety in ML systems. AI that is interpretable and equitable.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;"><span class="tag amber">XAI</span><span class="tag">Fairness</span><span class="tag">SHAP</span></div></div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      
+      <div class="section-label">// READING LIST</div>
+      <div style="background:var(--card);border:1px solid var(--border);">
+        <div style="padding:22px 26px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+          <div><div style="font-family:var(--font-head);font-size:14px;color:var(--white);margin-bottom:5px;">Attention Is All You Need</div><p style="font-size:12px;color:var(--dim)">Vaswani et al., 2017 · The Transformer paper. Essential reading for all of NLP and beyond.</p></div><span class="tag green">Foundational</span>
+        </div>
+        <div style="padding:22px 26px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+          <div><div style="font-family:var(--font-head);font-size:14px;color:var(--white);margin-bottom:5px;">Deep Residual Learning for Image Recognition</div><p style="font-size:12px;color:var(--dim)">He et al., 2015 · ResNet — skip connections that solved vanishing gradients for deep CNNs.</p></div><span class="tag green">Foundational</span>
+        </div>
+        <div style="padding:22px 26px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+          <div><div style="font-family:var(--font-head);font-size:14px;color:var(--white);margin-bottom:5px;">BERT: Pre-training of Deep Bidirectional Transformers</div><p style="font-size:12px;color:var(--dim)">Devlin et al., 2018 · The bidirectional transformer that reshaped the entire NLP landscape.</p></div><span class="tag cyan">NLP</span>
+        </div>
+        <div style="padding:22px 26px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+          <div><div style="font-family:var(--font-head);font-size:14px;color:var(--white);margin-bottom:5px;">Denoising Diffusion Probabilistic Models</div><p style="font-size:12px;color:var(--dim)">Ho et al., 2020 · The diffusion model paper that triggered the generative AI explosion.</p></div><span class="tag amber">Generative</span>
+        </div>
+      </div>
+    </section>
+  -->
+
+    <div style="padding:20px 0 60px;"><a href="index.html" class="button ghost">← Back to Home</a></div>
+    <footer>
+      <div class="footer-brand"><span>AI-ML CLUB</span> — GECA, Ajmer | Session 2025–26</div>
+      <div class="footer-links"><a href="projects.html">Projects</a><a href="events.html">Events</a><a href="join.html">Join Us</a><a href="contact.html">Contact</a><a href="team.html">Team</a></div>
+      <div class="footer-copy">&copy; 2025 AI-ML Club, GECA. All rights reserved.</div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
